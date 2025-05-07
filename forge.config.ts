@@ -14,7 +14,7 @@ const config: ForgeConfig = {
   rebuildConfig: {},
   makers: [
     new MakerSquirrel({
-      name: "演示",
+      name: "ep",
     }),
     new MakerZIP({}, ["darwin"]),
     new MakerRpm({}),
