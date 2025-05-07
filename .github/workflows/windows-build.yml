@@ -1,0 +1,45 @@
+name: Build Windows Installer
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "**.md"
+      - "**.spec.js"
+      - ".idea"
+      - ".vscode"
+      - ".dockerignore"
+      - "Dockerfile"
+      - ".gitignore"
+      - ".github/**"
+      - "!.github/workflows/windows-build.yml"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-2019
+
+    steps:
+      - name: Checkout reposistory
+        uses: actions/checkout@v4
+
+      - name: Installing Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Prepare for Windows Build
+        shell: powershell
+        run: |
+          npm install
+
+      - name: Build for Windows (x64)
+        shell: powershell
+        run: |
+          npm run make
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-installer
+          path: out/make
