@@ -1,8 +1,8 @@
 {
   "name": "electron-practice",
-  "productName": "electron-practice",
+  "productName": "演示",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "演示项目",
   "main": ".vite/build/main.js",
   "scripts": {
     "start": "electron-forge start",
