@@ -13,11 +13,10 @@ on:
       - ".gitignore"
       - ".github/**"
       - "!.github/workflows/windows-build.yml"
-  workflow_dispatch:
 
 jobs:
   build:
-    runs-on: windows-2019
+    runs-on: windows-latest
 
     steps:
       - name: Checkout reposistory
