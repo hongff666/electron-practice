@@ -15,7 +15,8 @@
     "noUnusedParameters": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "types": ["element-plus/global"]
   },
   "exclude": [
     "node_modules",

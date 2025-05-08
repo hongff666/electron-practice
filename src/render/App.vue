@@ -1,28 +1,16 @@
 <template>
-  <div
-    class="min-h-screen flex flex-col items-center justify-center bg-gray-100"
-  >
-    <h2 class="bg-red-500 text-white">chrome version:{{ chromeVersion }}</h2>
-    <button @click="pingTest">Pint</button>
+  <div class="flex-1 flex items-center justify-center">
+    <div class="shadow-lg rounded-lg p-4 bg-white flex flex-col gap-2">
+      <div class="text-2xl font-bold mb-4">
+        ChromeVersion:
+        <span>{{ chromeVersion }}</span>
+      </div>
+      <ElButton type="primary">Ping</ElButton>
+    </div>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-
-export default defineComponent({
-  name: "App",
-  data: () => ({
-    chromeVersion: "",
-  }),
-  mounted() {
-    this.chromeVersion = window.versions.chrome();
-  },
-  methods: {
-    async pingTest() {
-      let result = await window.api.ping();
-      alert(result);
-    },
-  },
-});
+<script lang="ts" setup>
+import { ElButton } from "element-plus";
+const chromeVersion = window.versions.chrome();
 </script>
