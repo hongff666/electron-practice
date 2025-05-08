@@ -3,6 +3,7 @@
     class="min-h-screen flex flex-col items-center justify-center bg-gray-100"
   >
     <h2 class="bg-red-500 text-white">chrome version:{{ chromeVersion }}</h2>
+    <button @click="pingTest">Pint</button>
   </div>
 </template>
 
@@ -17,6 +18,11 @@ export default defineComponent({
   mounted() {
     this.chromeVersion = window.versions.chrome();
   },
-  methods: {},
+  methods: {
+    async pingTest() {
+      let result = await window.api.ping();
+      alert(result);
+    },
+  },
 });
 </script>
