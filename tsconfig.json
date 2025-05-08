@@ -16,7 +16,7 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "allowSyntheticDefaultImports": true,
-    "types": ["element-plus/global"]
+    "types": ["element-plus/global", "node", "vite/client"]
   },
   "exclude": [
     "node_modules",

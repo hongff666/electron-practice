@@ -9,7 +9,10 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "eslint --ext .ts,.tsx ."
+    "lint": "eslint --ext .ts,.tsx,.js,.jsx,.vue .",
+    "lint:fix": "eslint --ext .ts,.tsx,.js,.jsx,.vue . --fix",
+    "lint:style": "eslint --ext .vue .",
+    "format": "eslint --ext .ts,.tsx,.js,.jsx,.vue . --fix"
   },
   "keywords": [],
   "author": {
@@ -29,9 +32,11 @@
     "@electron/fuses": "^1.8.0",
     "@tailwindcss/postcss": "^4.1.5",
     "@types/electron-squirrel-startup": "^1.0.2",
+    "@types/node": "^22.15.16",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "@vitejs/plugin-vue": "^5.2.3",
+    "@vue/eslint-config-typescript": "^11.0.3",
     "autoprefixer": "^10.4.21",
     "electron": "36.1.0",
     "eslint": "^8.57.1",
