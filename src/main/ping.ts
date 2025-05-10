@@ -1,7 +1,7 @@
-import { ipcMain } from "electron";
+import { ipcMain } from 'electron'
 
 export const ping = async () => {
-  return "pong";
-};
+  return 'pong'
+}
 
-ipcMain.handle("ping", ping);
+ipcMain.handle('ping', ping)

@@ -1,9 +1,9 @@
-import type { ForgeConfig } from "@electron-forge/shared-types";
-import { MakerSquirrel } from "@electron-forge/maker-squirrel";
-import { MakerZIP } from "@electron-forge/maker-zip";
-import { VitePlugin } from "@electron-forge/plugin-vite";
-import { FusesPlugin } from "@electron-forge/plugin-fuses";
-import { FuseV1Options, FuseVersion } from "@electron/fuses";
+import { MakerSquirrel } from '@electron-forge/maker-squirrel'
+import { MakerZIP } from '@electron-forge/maker-zip'
+import { FusesPlugin } from '@electron-forge/plugin-fuses'
+import { VitePlugin } from '@electron-forge/plugin-vite'
+import type { ForgeConfig } from '@electron-forge/shared-types'
+import { FuseV1Options, FuseVersion } from '@electron/fuses'
 
 const config: ForgeConfig = {
   packagerConfig: {
@@ -12,28 +12,28 @@ const config: ForgeConfig = {
   rebuildConfig: {},
   makers: [
     new MakerSquirrel({
-      name: "ep",
+      name: 'ep',
     }),
-    new MakerZIP({}, ["linux"]),
+    new MakerZIP({}, ['linux']),
   ],
   plugins: [
     new VitePlugin({
       build: [
         {
-          entry: "src/main/main.ts",
-          config: "vite.main.config.ts",
-          target: "main",
+          entry: 'src/main/main.ts',
+          config: 'vite.main.config.ts',
+          target: 'main',
         },
         {
-          entry: "src/preload/preload.ts",
-          config: "vite.preload.config.ts",
-          target: "preload",
+          entry: 'src/preload/preload.ts',
+          config: 'vite.preload.config.ts',
+          target: 'preload',
         },
       ],
       renderer: [
         {
-          name: "main_window",
-          config: "vite.renderer.config.ts",
+          name: 'main_window',
+          config: 'vite.renderer.config.ts',
         },
       ],
     }),
@@ -47,6 +47,6 @@ const config: ForgeConfig = {
       [FuseV1Options.OnlyLoadAppFromAsar]: true,
     }),
   ],
-};
+}
 
-export default config;
+export default config

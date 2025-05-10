@@ -11,8 +11,7 @@
     "publish": "electron-forge publish",
     "lint": "eslint --ext .ts,.tsx,.js,.jsx,.vue .",
     "lint:fix": "eslint --ext .ts,.tsx,.js,.jsx,.vue . --fix",
-    "lint:style": "eslint --ext .vue .",
-    "format": "eslint --ext .ts,.tsx,.js,.jsx,.vue . --fix"
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": {
@@ -40,21 +39,24 @@
     "autoprefixer": "^10.4.21",
     "electron": "36.1.0",
     "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.4.0",
     "postcss": "^8.5.3",
-    "tailwindcss": "^4.1.5",
-    "ts-node": "^10.9.2",
-    "typescript": "~4.5.4",
-    "vite": "^5.4.19",
     "prettier": "^3.3.2",
     "prettier-plugin-organize-imports": "^4.0.0",
-    "prettier-plugin-tailwindcss": "^0.6.11"
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^4.1.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.1.6",
+    "vite": "^5.4.19",
+    "vue-tsc": "^2.2.10"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "electron-squirrel-startup": "^1.0.1",
     "element-plus": "^2.9.9",
     "lucide-vue-next": "^0.508.0",
-    "vue": "^3.5.13",
-    "clsx": "^2.1.1"
+    "vue": "^3.5.13"
   }
 }

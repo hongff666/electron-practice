@@ -1,2 +1,2 @@
-import "./versions";
-import "./ping";
+import './ping'
+import './versions'

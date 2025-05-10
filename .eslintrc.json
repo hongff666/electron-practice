@@ -4,6 +4,7 @@
     "es6": true,
     "node": true
   },
+  "plugins": ["prettier"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -11,7 +12,8 @@
     "@vue/typescript/recommended",
     "plugin:import/recommended",
     "plugin:import/electron",
-    "plugin:import/typescript"
+    "plugin:import/typescript",
+    "prettier"
   ],
   "parser": "vue-eslint-parser",
   "parserOptions": {
@@ -24,6 +26,7 @@
     }
   },
   "rules": {
+    "prettier/prettier": "error",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-explicit-any": "warn",
     "vue/html-self-closing": [
