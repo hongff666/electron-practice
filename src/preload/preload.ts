@@ -1,2 +1,2 @@
-import './ping'
+import './api'
 import './versions'

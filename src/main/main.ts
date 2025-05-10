@@ -1,7 +1,7 @@
 import { app, BrowserWindow } from 'electron'
 import started from 'electron-squirrel-startup'
 import path from 'node:path'
-import './ping'
+import './api'
 
 if (started) {
   app.quit()
