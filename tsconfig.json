@@ -24,6 +24,7 @@
     ".vite",
     "out",
     "postcss.config.js",
-    "tailwind.config.js"
+    "tailwind.config.js",
+    "prettier.config.js"
   ]
 }
